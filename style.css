@@ -2082,3 +2082,23 @@ p, span, li, .hero-desc, .brand-desc {
 .about-mini-stats .m-stat-info span {
     color: #cbd5e1 !important; /* Maksa deskripsinya jadi abu-abu terang biar elegan */
 }
+/* --- FIX TAMPILAN HP BOCOR (SPACE KOSONG DI KANAN) --- */
+
+/* Maksa body web nggak boleh lebih lebar dari layar perangkat */
+html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important; /* INI KUNCINYA: Potong semua elemen yang tumpah ke luar jalur */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Maksa semua elemen menghitung garis pinggir ke dalam ukurannya (nggak melar) */
+* {
+    box-sizing: border-box !important;
+}
+
+/* Pastikan nggak ada gambar yang nyodok keluar layar */
+img {
+    max-width: 100% !important;
+}
