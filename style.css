@@ -907,18 +907,42 @@ body {
    RESPONSIVE LAYOUT (MEDIA QUERIES)
    ========================================== */
 @media (max-width: 992px) {
-    .hero-container, .contact-grid-details, .about-intro-grid { grid-template-columns: 1fr; }
-    .home-top-grid, .home-bottom-panel, .features-grid, .about-vmv-grid, .team-grid { grid-template-columns: 1fr; }
-    .hero-buttons { justify-content: center; }
-    .hero-content { text-align: center; }
-    .partners-grid { justify-content: center; }
-    .nav-container { padding: 18px 5%; }
-}
+    /* 1. Mencegah layar bisa digeser ke kanan (bocor) */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
 
-@media (max-width: 576px) {
-    .nav-menu { display: none; }
-    .hero-title { font-size: 2.4rem; }
-    .contact-wrapper { padding: 30px; }
+    /* 2. Pastikan container utama bisa mengecil */
+    .container {
+        width: 100% !important;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    /* 3. Paksa SEMUA layout Grid lu jadi 1 kolom (nyusun ke bawah) */
+    .home-top-grid-new, 
+    .home-bottom-panel-new,
+    .about-new-grid,
+    .about-vmv-new-grid {
+        grid-template-columns: 1fr !important;
+        width: 100%;
+    }
+
+    /* 4. Pastikan kotak nggak ada yang melar keluar batas */
+    .bottom-left-visual-new, 
+    .bottom-right-services-new,
+    .home-col-new {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* 5. Jaga-jaga biar gambar nggak nyodok layar */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 /* --- Tambahan CSS Baru untuk About Us --- */
 .about-us-section { padding: 100px 0; background: rgba(255, 255, 255, 0.01); }
@@ -2118,4 +2142,204 @@ img {
         flex: none !important;
         padding: 30px 20px !important; /* Nyesuain jarak dalem biar rapi di HP */
     }
+}
+/* =========================================================
+   FIX MOBILE KEPOTONG: BUTTON, BLOG, & FOOTER
+   ========================================================= */
+
+@media (max-width: 992px) {
+    /* 1. Kunci Layar Biar Gak Bisa Digeser ke Kanan */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    /* Pastikan pembungkus utamanya nggak lebih lebar dari HP */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. FIX BUTTON NABRAK (Hero Section) */
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important; /* Tombol disusun atas-bawah */
+        width: 100% !important;
+        gap: 15px !important;
+    }
+    .hero-buttons .btn {
+        width: 100% !important; /* Tombol ditarik penuh biar rapi */
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    /* 3. FIX BLOG KEPOTONG */
+    .blog-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Paksa jadi 1 kolom ke bawah */
+        width: 100% !important;
+        gap: 30px !important;
+    }
+    .blog-card {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 4. FIX FOOTER & NEWSLETTER KEPOTONG */
+    .footer-grid {
+        display: flex !important;
+        flex-direction: column !important; /* Susun logo, sosmed, dan newsletter atas-bawah */
+        width: 100% !important;
+        gap: 40px !important;
+    }
+    .brand-side, 
+    .social-side, 
+    .newsletter-side {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Mencegah kotak input email newsletter bablas ke kanan */
+    .sub-form {
+        width: 100% !important;
+        display: flex !important;
+    }
+    .sub-form input {
+        width: 100% !important;
+        flex: 1 !important;
+    }
+}
+/* =========================================================
+   FIX FINAL MOBILE: PRODUCT, GRAFIK, BLOG, & NAVBAR
+   ========================================================= */
+
+@media (max-width: 992px) {
+    /* 1. FIX PRODUCT & GRAFIK (CYBER PANEL) KEPOTONG */
+    .hero-container {
+        display: flex !important;
+        flex-direction: column !important; /* Paksa teks dan grafik turun atas-bawah */
+        width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+        gap: 40px !important;
+    }
+    
+    .hero-content, .hero-visual {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .cyber-panel {
+        width: 100% !important; /* Paksa grafik fit 100% di HP */
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+    }
+
+    /* 2. FIX BUTTON PRODUCT BIAR SIMETRIS */
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important; /* Tombol dijejer atas-bawah */
+        width: 100% !important;
+        gap: 15px !important;
+    }
+    
+    .hero-buttons .btn {
+        width: 100% !important; /* Tarik tombol mentok kiri-kanan biar simetris */
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    /* 3. FIX BLOG KEPOTONG */
+    .blog-grid {
+        display: flex !important;
+        flex-direction: column !important; /* Kartu blog dijejer atas-bawah */
+        width: 100% !important;
+        gap: 30px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .blog-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+    }
+
+    .blog-img img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+    }
+
+    /* 4. BONUS: FIX NAVBAR MENU NUMPUK LOGO */
+    .nav-container {
+        display: flex !important;
+        flex-direction: column !important; /* Turunin menu biar ga nabrak logo */
+        gap: 15px !important;
+        padding: 15px 20px !important;
+    }
+    
+    .nav-menu {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+    }
+}
+/* =========================================================
+   FIX TESTIMONI: BIKIN SIMETRIS & RATA TENGAH
+   ========================================================= */
+
+.tp-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Maksa semua elemen ke tengah */
+    text-align: center !important; /* Maksa teks rata tengah */
+}
+
+.tp-logo-side {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important; /* Bikin logo perusahaan (mitra) di tengah */
+    margin-bottom: 20px !important;
+}
+
+.tp-content-side {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; 
+    width: 100% !important;
+}
+
+.quote-icon {
+    text-align: center !important;
+    margin: 0 auto 15px auto !important; /* Bikin ikon kutipan presisi di tengah */
+}
+
+.tp-text {
+    text-align: center !important; /* Teks omongan klien jadi rata tengah */
+}
+
+.tp-user {
+    display: flex !important;
+    flex-direction: column !important; /* Susun foto dan nama klien atas-bawah */
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 25px !important;
+    gap: 10px !important;
+}
+
+.tp-meta {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important; /* Nama dan jabatan rata tengah */
 }
