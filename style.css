@@ -2102,3 +2102,20 @@ html, body {
 img {
     max-width: 100% !important;
 }
+/* --- FIX LAYOUT KEGENCET SETENGAH LAYAR DI HP --- */
+@media (max-width: 992px) {
+    .home-bottom-panel-new {
+        display: flex !important;
+        flex-direction: column !important; /* Maksa susunannya jadi atas-bawah, bukan kiri-kanan */
+        width: 100% !important;
+        gap: 30px !important;
+    }
+    
+    .bottom-left-visual-new, 
+    .bottom-right-services-new {
+        width: 100% !important; /* Maksa elemennya melar 100% ngisi layar HP */
+        max-width: 100% !important;
+        flex: none !important;
+        padding: 30px 20px !important; /* Nyesuain jarak dalem biar rapi di HP */
+    }
+}
