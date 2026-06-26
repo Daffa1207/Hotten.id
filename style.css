@@ -3446,7 +3446,7 @@ body {
 
 @media (max-width: 992px) {
     .home-intro-visual {
-        margin-top: 135px !important; /* header mobile lebih tinggi */
+        margin-top: 115px !important; /* header mobile lebih tinggi */
         padding-top: 0 !important;
     }
 }
