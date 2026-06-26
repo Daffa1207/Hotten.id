@@ -2559,3 +2559,390 @@ img {
     .d-top-stats { flex-direction: column !important; }
     .d-body-split { grid-template-columns: 1fr !important; }
 }
+.footer-dark {
+    background-color: #0b1120;
+    color: #94a3b8;
+    padding: 60px 0 30px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-top: 50px;
+}
+
+.footer-dark .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.footer-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.f-logo-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.f-logo-area img {
+    height: 40px;
+    margin-right: 15px;
+}
+
+.f-logo-area h2,
+.f-heading {
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+}
+
+.f-desc,
+.f-sub {
+    color: #cbd5e1;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.f-heading {
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #1e293b;
+    padding-bottom: 8px;
+}
+
+.f-map-card,
+.c-item {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+}
+
+.f-map-card {
+    padding: 15px;
+    text-align: center;
+}
+
+.map-img-container {
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background: #1e293b;
+}
+
+.map-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+    filter: grayscale(100%);
+}
+
+.map-address strong {
+    display: block;
+    color: #e2e8f0;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.map-address p {
+    color: #94a3b8;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.btn-map,
+.btn-wa-large {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.btn-map {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    font-size: 0.8rem;
+    border: 1px solid #1e293b;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.c-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.c-item > div {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.c-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.c-icon.green {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+}
+
+.c-icon.purple {
+    background: rgba(129, 140, 248, 0.1);
+    color: #818cf8;
+}
+
+.c-item strong {
+    display: block;
+    color: #e2e8f0;
+    font-size: 0.85rem;
+}
+
+.c-item span {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.c-arrow {
+    font-size: 1.5rem !important;
+}
+
+.btn-wa-large {
+    background: #4f46e5;
+    padding: 15px;
+    text-align: center;
+}
+
+.f-bottom {
+    border-top: 1px solid #1e293b;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-title {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #64748b;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.f-social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.f-social-icons a {
+    width: 40px;
+    height: 40px;
+    background: #111827;
+    color: #94a3b8;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.f-legal-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f1523;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+}
+
+.f-links {
+    display: flex;
+    gap: 15px;
+}
+
+.f-links a {
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+@media (max-width: 992px) {
+    .footer-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .f-legal-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .f-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+/* FIX KONTRAS TEKS FOOTER */
+.footer-dark,
+.footer-dark p,
+.footer-dark span,
+.footer-dark a {
+    color: #cbd5e1 !important;
+}
+
+.footer-dark h2,
+.footer-dark h3,
+.footer-dark h4,
+.footer-dark strong,
+.f-logo-area h2,
+.f-heading,
+.map-address strong,
+.c-item strong {
+    color: #ffffff !important;
+}
+
+.f-desc,
+.f-sub,
+.map-address p,
+.f-copyright,
+.f-links a,
+.c-item span {
+    color: #cbd5e1 !important;
+}
+
+.social-title {
+    color: #e2e8f0 !important;
+}
+
+.f-social-icons a {
+    color: #ffffff !important;
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+.f-social-icons a:hover {
+    background-color: #334155 !important;
+    color: #ffffff !important;
+}
+
+.btn-map {
+    color: #ffffff !important;
+    background-color: #1e293b !important;
+    border-color: #475569 !important;
+}
+
+.btn-wa-large {
+    color: #ffffff !important;
+    background-color: #2563eb !important;
+}
+
+.c-icon.green {
+    color: #4ade80 !important;
+}
+
+.c-icon.purple {
+    color: #c4b5fd !important;
+}
+
+.c-arrow {
+    color: #ffffff !important;
+}
+/* HEADER TETAP MUNCUL SAAT SCROLL */
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(11, 15, 25, 0.8) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-flat) !important;
+    box-shadow: none !important;
+}
+
+.nav-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 16px 5% !important;
+}
+
+.logo-area,
+.logo-text {
+    color: var(--text-main) !important;
+}
+
+.slogan {
+    color: var(--text-muted) !important;
+}
+
+.nav-menu a {
+    color: var(--text-muted) !important;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--text-main) !important;
+}
+
+.nav-menu a::after {
+    background: var(--accent-light) !important;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+/* BIAR KONTEN PERTAMA NGGAK KETUTUP HEADER FIXED */
+body {
+    padding-top: 86px;
+}
+
+/* RESPONSIVE HEADER */
+@media (max-width: 992px) {
+    .nav-container {
+        flex-direction: column !important;
+        gap: 14px !important;
+        padding: 14px 20px !important;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 16px !important;
+    }
+
+    body {
+        padding-top: 135px;
+    }
+}
