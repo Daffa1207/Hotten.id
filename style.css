@@ -3450,3 +3450,244 @@ body {
         padding-top: 0 !important;
     }
 }
+/* TESTIMONI & MITRA - PROFESSIONAL RESPONSIVE DESIGN */
+.testimoni-mitra-section {
+    background:
+        radial-gradient(circle at top, rgba(79, 70, 229, 0.08), transparent 35%),
+        #ffffff;
+    padding: 90px 0 100px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.testimoni-container {
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.testimoni-header {
+    text-align: center;
+    margin-bottom: 58px;
+}
+
+.testimoni-header span {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    color: #4f46e5;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.testimoni-header span::before,
+.testimoni-header span::after {
+    content: "";
+    width: 58px;
+    height: 2px;
+    background: #7c6ff0;
+}
+
+.testimoni-header h3 {
+    color: #0b102f !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 4rem !important;
+    line-height: 1.05;
+    margin: 26px 0 18px;
+    font-weight: 800;
+}
+
+.testimoni-header p {
+    color: #64708f;
+    font-size: 1.25rem;
+}
+
+.testimoni-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.testimoni-card {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #dbe0f3;
+    border-radius: 18px;
+    box-shadow: 0 22px 60px rgba(15, 23, 42, 0.06);
+    min-height: 285px;
+    display: grid;
+    grid-template-columns: 0.78fr 1.22fr;
+    overflow: hidden;
+}
+
+.mitra-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 48px 40px;
+    border-right: 1px solid #dbe0f3;
+    text-align: center;
+}
+
+.mitra-side img {
+    max-width: 230px;
+    max-height: 110px;
+    object-fit: contain;
+}
+
+.mitra-side span {
+    color: #65708f;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.testimoni-content {
+    padding: 50px 70px;
+}
+
+.quote-mark {
+    color: #9b94e8;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 5rem;
+    line-height: 0.7;
+    height: 48px;
+}
+
+.testimoni-text {
+    color: #10163d;
+    font-size: 1.08rem;
+    line-height: 1.85;
+    max-width: 610px;
+    margin: 18px 0 34px;
+}
+
+.testimoni-text::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 2px;
+    background: #8b7cf6;
+    margin-top: 28px;
+}
+
+.testimoni-user {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.testimoni-user img {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #eef2ff;
+}
+
+.testimoni-user strong {
+    display: block;
+    color: #0b102f;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.testimoni-user span {
+    display: block;
+    color: #4338ca;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.testimoni-user small {
+    display: block;
+    color: #65708f;
+    font-size: 0.9rem;
+    letter-spacing: 0.4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .testimoni-mitra-section {
+        padding: 70px 0 80px;
+    }
+
+    .testimoni-header h3 {
+        font-size: 3rem !important;
+    }
+
+    .testimoni-header p {
+        font-size: 1.05rem;
+    }
+
+    .testimoni-card {
+        grid-template-columns: 1fr;
+    }
+
+    .mitra-side {
+        border-right: none;
+        border-bottom: 1px solid #dbe0f3;
+        padding: 42px 28px;
+    }
+
+    .testimoni-content {
+        padding: 42px 34px;
+    }
+
+    .testimoni-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .testimoni-container {
+        width: 100%;
+        padding: 0 18px;
+    }
+
+    .testimoni-header span {
+        font-size: 0.75rem;
+        gap: 10px;
+        letter-spacing: 2px;
+    }
+
+    .testimoni-header span::before,
+    .testimoni-header span::after {
+        width: 32px;
+    }
+
+    .testimoni-header h3 {
+        font-size: 2.35rem !important;
+    }
+
+    .testimoni-card {
+        border-radius: 14px;
+    }
+
+    .mitra-side img {
+        max-width: 190px;
+    }
+
+    .testimoni-content {
+        padding: 36px 24px;
+    }
+
+    .quote-mark {
+        font-size: 4rem;
+    }
+
+    .testimoni-text {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .testimoni-user {
+        align-items: flex-start;
+    }
+
+    .testimoni-user img {
+        width: 62px;
+        height: 62px;
+    }
+}
